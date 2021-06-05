@@ -16,6 +16,8 @@ Since the author I need to prepare for my graduate exams at the moment, the deve
 Questions or suggestions are very welcome, and although I can't focus on development on my end, I still log in to GitHub often to check out everyone's suggestions and pr.😀
 
 ## Project significance
+> The following is only a vision of what this program will look like when it is completed, the functions described so far are not fully implemented, please refer to the following [Functions realized](#functions-realized) for details of implementation
+
 This project is mainly to use small hard disk server for offline downloading, for large BitTorrent files to be downloaded in sections according to the size of the hard disk, each time downloading a part, then uploading the network disk, delete and then download the other parts, until all the files are downloaded.
 
 At the same time, communication via the bot protocol facilitates use on machines that cannot intranet penetration, and simplifies the usual use of download programs for added convenience.For links, sending a message directly to the Bot will directly identify and download them. It can actually delete files from the download folder, which is not possible with web panels such as AriaNG, and is very convenient as a tool for managing downloads and notifying timely completion of downloads. You can move files, and for users who mount their hard drives via rclone you can copy and paste directly through this program, without having to open an ssh connection to the VPS for `cp` operations, which is also very convenient.
@@ -57,6 +59,14 @@ At the same time, communication via the bot protocol facilitates use on machines
   - [x] Custom BitTorrent/Magnet download
     - [x] Select only the largest file to download
     - [x] Intelligent file selection based on file size, do not select small files in BitTorrent/Magnet.
+  - [ ] Download files from OneDrive/SharePoint share links ([Python script currently used as a demo](https://github.com/gaowanliang/OneDriveShareLinkPushAria2))
+    - [ ] xxx-my.sharepoint.com Download of share links
+      - [ ] Downloading multiple files without password for shared links
+      - [ ] Downloading multiple files with password for shared links
+      - [ ] Download of files in nested folders
+      - [ ] Download any file of your choice
+    - [ ] xxx.sharepoint.com Downloads with share links
+    - [ ] xxx-my.sharepoint.cn Download of share links (theoretically supported)
   - [ ] Download BitTorrent/Magnet according to the size of storage space
     - [ ] Do not download files that exceed storage space
     - [ ] Download the files in BitTorrent/Magnet several times according to the storage space
@@ -66,6 +76,7 @@ At the same time, communication via the bot protocol facilitates use on machines
 - [x] Upload a file
   - [x] Upload the file to OneDrive when the download is complete
     - [ ] Resume from break point
+    - [ ] Supports 21vianet (CN) version
   - [x] Upload the file to Google Drive when the download is complete
   - [ ] Upload the file to Mega when the download is complete
   - [ ] Upload the file to 189Cloud when the download is complete

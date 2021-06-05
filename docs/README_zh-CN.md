@@ -9,6 +9,7 @@
 (目前) 🤖 一个可以控制你的Aria2服务器、控制服务器文件，同时可以上传到OneDrive的Telegram Bot。
 
 ## 意义
+> 以下仅为本程序完成后的设想，目前描述的功能并没有完全实现，实现的详情请参考下面的功能实现
 
 这个项目主要就是利用吃灰小盘vps进行离线下载，对于大bt文件进行根据硬盘大小分段下载，每次都下载一部分，然后上传网盘，删除再下载其他部分，直到下载完所有文件。
 
@@ -53,6 +54,14 @@
     - [x] 智能 BitTorrent/Magnet 下载方式
         - [x] 只选择下载最大的文件
         - [x] 根据文件大小智能选择文件，不选择小文件
+    - [ ] 下载OneDrive/SharePoint 分享链接中的文件（[Python demo](https://github.com/gaowanliang/OneDriveShareLinkPushAria2)）
+      - [ ] xxx-my.sharepoint.com 下载链接的下载
+        - [ ] 无下载密码的多文件推送
+        - [ ] 有下载密码的多文件推送
+        - [ ] 嵌套文件夹的文件推送
+        - [ ] 任意选择文件推送
+      - [ ] xxx.sharepoint.com 下载链接的下载
+      - [ ] xxx-my.sharepoint.cn 下载链接的下载(理论上支持)
     - [ ] 自适应环境存储空间的 BitTorrent/Magnet 下载
         - [ ] 不下载超过存储空间的文件
         - [ ] 根据存储空间分块多次下载 BitTorrent/Magnet 内的文件
@@ -62,6 +71,7 @@
 - [x] 上传文件
     - [x] 下载完成后，向 OneDrive 上传文件
       - [ ] 断点续传
+      - [ ] 支持世纪互联
     - [x] 下载完成后，向 Google Drive 上传文件
     - [ ] 下载完成后，向 Mega 上传文件
     - [ ] 下载完成后，向 天翼网盘 上传文件
